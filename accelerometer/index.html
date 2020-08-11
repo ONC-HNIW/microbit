@@ -27,6 +27,7 @@
   
   //micro:bit BLE UUID
   const SERVICE_ACCELEROMETER = 'e95d0753-251d-470a-a062-fa1922dfa9a8';
+  //e95d9715-251d-470a-a062fa1922dfa9a8
   const CHAR_ACCELEROMETER_DATA = 'e95dca4b-251d-470a-a062-fa1922dfa9a8';
   
   function connect() {
@@ -62,9 +63,10 @@
   }
   
   function onAccelerometerValueChanged(event) {
-    document.js.x.value = event.target.value.getUint16(0)/1000.0;
-    document.js.y.value = event.target.value.getUint16(2)/1000.0;
-    document.js.z.value = event.target.value.getUint16(4)/1000.0;
+    //document.js.x.value = event.target.value.getUint16(0)/1000.0;
+    //document.js.y.value = event.target.value.getUint16(2)/1000.0;
+    //document.js.z.value = event.target.value.getUint16(4)/1000.0;
+    document.js.angle.value = event.target.value.getUint16(1)/1000.0;
   } 
   
   function disconnect() {
