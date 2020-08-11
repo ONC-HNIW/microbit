@@ -11,13 +11,13 @@
       <input type="button" value="切断" onclick="disconnect();"/> 
       <br>
       <label>X</label>
-      <input type="text" name="x" value=""/>
-      <br>
+      <input type="text" name="angle" value=""/>
+      <!--<br>
       <label>Y</label>
       <input type="text" name="y" value=""/>
       <br>
       <label>Z</label>
-      <input type="text" name="z" value=""/>
+      <input type="text" name="z" value=""/>-->
     </form>
   </body>
 </html>
@@ -26,9 +26,9 @@
   var bleDevice;
   
   //micro:bit BLE UUID
-  const SERVICE_ACCELEROMETER = 'e95d0753-251d-470a-a062-fa1922dfa9a8';
-  //e95d9715-251d-470a-a062fa1922dfa9a8
-  const CHAR_ACCELEROMETER_DATA = 'e95dca4b-251d-470a-a062-fa1922dfa9a8';
+  const SERVICE_ACCELEROMETER = 'e95d9715-251d-470a-a062f-a1922dfa9a8';
+  //
+  const CHAR_ACCELEROMETER_DATA = 'e95d9715-251d-470a-a062f-a1922dfa9a8';
   
   function connect() {
     navigator.bluetooth.requestDevice({
